@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>咖啡廳滿意度調查</title>
+<style>
+header{
+	background: #003D79;
+	color: lightblue;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+fieldset {
+	width: 500px;
+	border: 1px solid blue;
+	border-radius: 20px;
+	margin: 15px auto;
+}
+
+legend {
+	color: blue;
+	margin-left: 160px;
+}
+
+input, select, textarea {
+	background-color: #ECFFFF;
+}
+
+.sub {
+	width: 500px;
+	margin: 10px auto;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<header><h2>咖啡廳滿意度調查</h2></header>
+	<form action="deplayCoffeeform2.jsp" method="get">
+		<fieldset>
+			<legend>part1.消費資料</legend>
+			<label for="name">貴賓暱稱：</label><br> 
+			<input type="text" id="name" name="name" required><br> 
+			<label for="date">消費日期：</label><br>
+			<input type="date" id="date" name="date" required><br> 
+			<label for="time">消費時間：</label><br> 
+			<input type="time" id="time" name="time" required><br> 
+			<br>性別：<br> 
+			<input type="radio" id="male" name="gender" value="男性"> 
+			<label for="male">男性</label> 
+			<input type="radio" id="female" name="gender" value="女性"> 
+			<label for="female">女性</label><br>
+		</fieldset>
+
+		<fieldset>
+			<legend>part2.消費動機及品項(多選)</legend>
+			<br>如何得知本店：<br> 
+			<input type="checkbox" id="how1" name="how" value="剛好路過"> 
+			<label for="how">剛好路過</label> 
+			<input type="checkbox" id="how2" name="how" value="親朋好友介紹"> 
+			<label for="how">親朋好友介紹</label> 
+			<input type="checkbox" id="how3" name="how" value="社群推薦"> 
+			<label for="how">社群推薦</label> 
+			<input type="checkbox" id="how4" name="how" value="我是常客"> 
+			<label for="how">我是常客</label><br>
+			<br>今日消費品項：<br> 
+			<input type="checkbox" id="consume1" name="consume" value="咖啡"> 
+			<label for="consume">咖啡</label> 
+			<input type="checkbox" id="consume2" name="consume" value="茶"> 
+			<label for="consume">茶</label> 
+			<input type="checkbox" id="consume3" name="consume" value="甜點"> 
+			<label for="consume">甜點</label><br>
+		</fieldset>
+
+		<fieldset>
+			<legend>part3.滿意度調查</legend>
+			<br>口味滿意度：<br> 
+			<select name="taste" multiple>
+				<option value="非常滿意" selected>非常滿意</option>
+				<option value="滿意">滿意</option>
+				<option value="普通">普通</option>
+				<option value="有待改進">有待改進</option>
+				<option value="不滿意">不滿意</option>
+			</select><br> 
+			<br>環境滿意度：<br> 
+			<select name="place" multiple>
+				<option value="非常滿意" selected>非常滿意</option>
+				<option value="滿意">滿意</option>
+				<option value="普通">普通</option>
+				<option value="有待改進">有待改進</option>
+				<option value="不滿意">不滿意</option>
+			</select><br> 
+			<br>服務滿意度：<br> 
+			<select name="survice" multiple>
+				<option value="非常滿意" selected>非常滿意</option>
+				<option value="滿意">滿意</option>
+				<option value="普通">普通</option>
+				<option value="有待改進">有待改進</option>
+				<option value="不滿意">不滿意</option>
+			</select><br>
+		</fieldset>
+
+		<fieldset>
+			<legend>part4.我有話要說</legend>
+			<label for="comment1">寶貴意見:</label>
+			<textarea name="comment" id="comment1" cols="65" rows="3"></textarea><br>
+		</fieldset>
+		<div class="sub" >
+		<input type="submit" value="送出">
+		</div>
+	</form>
+</body>
+</html>
